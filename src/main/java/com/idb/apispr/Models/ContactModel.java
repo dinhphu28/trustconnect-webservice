@@ -1,0 +1,91 @@
+package com.idb.apispr.Models;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class ContactModel {
+    private String monthz;
+    private String sys;
+    private String appnum;
+    private String loanid;
+    private String loanaccountno;
+    private String dpdbom;
+    private String overdueprinamt;
+    private String overdueintamt;
+    private String overduelpfamt;
+    private String nextcycleduedate;
+    private String nextcycledueamount;
+    private String customermobilenum;
+    private String active;
+    private String obsduedate;
+    private String obsdueno;
+    private String assigninvaliddate;
+    private String futureprinamt;
+    private String permfulladdr;
+    private String permregion;
+    private String permcity;
+    private String permarea;
+    private String currfulladdr;
+    private String currcity;
+    private String currarea;
+    private String posbom;
+    private String posassign;
+    private String remainprin;
+    private String customername;
+    private String birthday;
+    private String emi;
+    private String gender;
+    private String spousename;
+    private String spousephone;
+    private String familyphone;
+    private String familybook;
+    private String familyrelation;
+    private String refname1;
+    private String refrelationship1;
+    private String phoneref1;
+    private String refname2;
+    private String refrelationship2;
+    private String phoneref2;
+    private String workphone;
+    private String addname1;
+    private String addphone1;
+    private String addphone2;
+    private String cif;
+    private String pernamentaddress;
+    private String domicileaddress;
+    private String companyname;
+    private String tenor;
+    private String loanamt;
+    private String disbursementdate;
+    private String addname2;
+    private String productkh;
+    private String contractdate;
+    private String idcard;
+    private String curraccount;
+    private String firstpaiddate;
+    private String lastpaiddate;
+    private String lastcallfinal;
+    private String lastresultfinal;
+    private String totalamtpaid;
+    private String totaloverdue;
+    private String duedateoverdue;
+    private String offifulladdr;
+    private String offarea;
+    private String offcity;
+    private String stk;
+    private String groupz;
+    private String dpdcur;
+    private String dpdassign;
+    private String assigndate;
+    private String status;
+    private String writeoff;
+    private String agency;
+    private String mob;
+    private String agent;
+}
