@@ -40,6 +40,30 @@ paths:
             application/json:
               schema:
                 type: object
+  /api/v2/contacts:
+    post:
+      tags:
+        - contact-v-2-controller
+      operationId: createBatchContactsV2
+      parameters:
+        - name: X-API-KEY
+          in: header
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImpContactsPayloadV2Model'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
   /api/v1/source-calls:
     get:
       tags:
@@ -327,5 +351,264 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ContactModel'
+        sourceCall:
+          type: string
+    
+    ContactV2Model:
+      type: object
+      properties:
+        monthz:
+          type: string
+          example: '2022-04'
+        sys:
+          type: string
+          example: 'F1'
+        appnum:
+          type: string
+          example: 'APPL00275912'
+        loanid:
+          type: string
+          example: '5083486'
+        loanaccountno:
+          type: string
+          example: 'CA00000583948'
+        dpdbom:
+          type: string
+          example: '258'
+        overdueprinamt:
+          type: string
+          example: '7608182'
+        overdueintamt:
+          type: string
+          example: '3992818'
+        overduelpfamt:
+          type: string
+          example: '2250000'
+        nextcycleduedate:
+          type: string
+          example: '2022-04-17'
+        nextcycledueamount:
+          type: string
+          example: '1289000'
+        customermobilenum:
+          type: string
+          example: '0888866660'
+        active:
+          type: string
+          example: 'TRUE'
+        obsduedate:
+          type: string
+          example: '2021-07-17'
+        obsdueno:
+          type: string
+          example: '24'
+        assigninvaliddate:
+          type: string
+          example: '2022-04-30'
+        futureprinamt:
+          type: string
+          example: '1'
+        permfulladdr:
+          type: string
+          example: '*, KHU PHỐ II, THỊ TRẤN BÌNH ĐẠI,  BÌNH ĐẠI, BẾN TRE'
+        permregion:
+          type: string
+          example: 'MEKONG'
+        permcity:
+          type: string
+          example: 'BẾN TRE'
+        permarea:
+          type: string
+          example: 'BÌNH ĐẠI'
+        currfulladdr:
+          type: string
+          example: '*, KHU PHỐ II, THỊ TRẤN BÌNH ĐẠI,  BÌNH ĐẠI, BẾN TRE'
+        currcity:
+          type: string
+          example: 'BẾN TRE'
+        currarea:
+          type: string
+          example: 'BÌNH ĐẠI'
+        posbom:
+          type: string
+          example: '12126810'
+        posassign:
+          type: string
+          example: '12126810'
+        remainprin:
+          type: string
+          example: '4518628'
+        customername:
+          type: string
+          example: 'TRẦN THỊ TRANG'
+        birthday:
+          type: string
+          example: '1978-06-15'
+        emi:
+          type: string
+          example: '1289000'
+        gender:
+          type: string
+          example: 'Female'
+        spousename:
+          type: string
+          example: 'PHẠM TẤN TÀI'
+        spousephone:
+          type: string
+          example: '0329909333'
+        familyphone:
+          type: string
+          example: ''
+        familybook:
+          type: string
+          example: ''
+        familyrelation:
+          type: string
+          example: ''
+        refname1:
+          type: string
+          example: ''
+        refrelationship1:
+          type: string
+          example: ''
+        phoneref1:
+          type: string
+          example: ''
+        refname2:
+          type: string
+          example: 'TRẦN THỊ HỒNG LAM'
+        refrelationship2:
+          type: string
+          example: 'Colleague'
+        phoneref2:
+          type: string
+          example: '0393142222'
+        workphone:
+          type: string
+          example: ''
+        addname1:
+          type: string
+          example: 'NGUYỄN THỊ HIỀN EM'
+        addphone1:
+          type: string
+          example: '0985410000'
+        addphone2:
+          type: string
+          example: ''
+        cif:
+          type: string
+          example: '02933001'
+        pernamentaddress:
+          type: string
+          example: '*, KHU PHỐ II, THỊ TRẤN BÌNH ĐẠI,  BÌNH ĐẠI, Bến Tre, Vietnam'
+        domicileaddress:
+          type: string
+          example: '*,KHU PHỐ II,THỊ TRẤN BÌNH ĐẠI, BÌNH ĐẠI,Bến Tre,ALL'
+        companyname:
+          type: string
+          example: 'DỊCH VỤ NẤU ĐÁM, TIỆC'
+        tenor:
+          type: string
+          example: '36'
+        loanamt:
+          type: string
+          example: '21500000'
+        disbursementdate:
+          type: string
+          example: '2019-07-17'
+        addname2:
+          type: string
+          example: ''
+        productkh:
+          type: string
+          example: 'UNSECURED CASH LOAN_SURROGATES SCHEME RATE 59%'
+        contractdate:
+          type: string
+          example: '2019-07-17'
+        idcard:
+          type: string
+          example: '320973318'
+        curraccount:
+          type: string
+          example: '02233001010'
+        firstpaiddate:
+          type: string
+          example: '2019-08-19'
+        lastpaiddate:
+          type: string
+          example: '2021-06-17'
+        lastcallfinal:
+          type: string
+          example: ''
+        lastresultfinal:
+          type: string
+          example: ''
+        totalamtpaid:
+          type: string
+          example: '29647000'
+        totaloverdue:
+          type: string
+          example: '13851000'
+        duedateoverdue:
+          type: string
+          example: '2021-07-17'
+        offifulladdr:
+          type: string
+          example: '*, KHU PHỐ II, THỊ TRẤN BÌNH ĐẠI,  BÌNH ĐẠI, BẾN TRE'
+        offarea:
+          type: string
+          example: ' BÌNH ĐẠI'
+        offcity:
+          type: string
+          example: 'BẾN TRE'
+        stk:
+          type: string
+          example: '02233001010'
+        groupz:
+          type: string
+          example: 'WO'
+        dpdcur:
+          type: string
+          example: '253'
+        dpdassign:
+          type: string
+          example: ''
+        assigndate:
+          type: string
+          example: ''
+        status:
+          type: string
+          example: 'new'
+        writeoff:
+          type: string
+          example: '1'
+        agency:
+          type: string
+          example: 'AGENCY_CNX'
+        mob:
+          type: string
+          example: '32'
+        agent:
+          type: string
+          example: 'agent01'
+        shouldnotupdateagent:
+          type: string
+          example: 'FALSE'
+        totalamount:
+          type: string
+          example: '2022-01-01'
+        datestart:
+          type: string
+          example: '2022-01-02'
+        dateend:
+          type: string
+          example: '2022-01-02'
+    ImpContactsPayloadV2Model:
+      type: object
+      properties:
+        contacts:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContactV2Model'
         sourceCall:
           type: string

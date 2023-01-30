@@ -22,4 +22,16 @@ public class ImpResultService {
 
         return impResult;
     }
+
+    public ImpResult execImportContactsV3(String inJsonContacts, String inUser, String inFullName, String inSource) {
+        ImpResult impResult = null;
+
+        try {
+            impResult = repo.execImportContactsV3(inJsonContacts, inUser, inFullName, inSource);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
+        return impResult;
+    }
 }
