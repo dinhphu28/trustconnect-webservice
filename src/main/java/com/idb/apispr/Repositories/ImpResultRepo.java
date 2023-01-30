@@ -14,4 +14,10 @@ public interface ImpResultRepo extends JpaRepository<ImpResult, String> {
         nativeQuery = true
     )
     ImpResult execImportContacts(String inJsonContacts, String inUser, String inFullName, String inSource);
+
+    @Query(
+        value = "call api.tls_imp_source_v3(?1, ?2, ?3, ?4)",
+        nativeQuery = true
+    )
+    ImpResult execImportContactsV3(String inJsonContacts, String inUser, String inFullName, String inSource);
 }
